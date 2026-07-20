@@ -1,1 +1,25 @@
-/.idea/
+# Виртуальное окружение
+venv/
+.venv/
+
+# Переменные окружения (секреты!)
+.env
+
+# Кэш Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node modules (если вдруг появятся)
+node_modules/
