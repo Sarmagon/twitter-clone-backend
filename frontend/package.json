@@ -1,0 +1,23 @@
+{
+  "name": "diploma-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "vue": "^3.5.0",
+    "vue-router": "^4.5.0",
+    "vuex": "^4.1.0",
+    "axios": "^1.12.0",
+    "moment": "^2.30.1",
+    "random-avatar-generator": "^2.0.0",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "vite": "^6.1.0",
+    "@vitejs/plugin-vue": "^5.2.0",
+    "sass": "^1.83.0"
+  }
+}

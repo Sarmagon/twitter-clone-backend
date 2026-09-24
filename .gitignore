@@ -23,3 +23,9 @@ Thumbs.db
 
 # Node modules (если вдруг появятся)
 node_modules/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+static/media/*
+!static/media/.gitkeep
