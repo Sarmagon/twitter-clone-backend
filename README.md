@@ -1,5 +1,7 @@
 # Корпоративный сервис микроблогов — Python Advanced
 
+[![Backend checks](https://github.com/Sarmagon/twitter-clone-backend/actions/workflows/ci.yml/badge.svg)](https://github.com/Sarmagon/twitter-clone-backend/actions/workflows/ci.yml)
+
 Автор: Станислав Смирнов. Учебный backend на FastAPI, SQLAlchemy и PostgreSQL 15; Nginx отдаёт готовый интерфейс Vue и проксирует API.
 
 ## Запуск на Windows или Ubuntu
@@ -56,6 +58,8 @@ docker compose cp db:/tmp/database.dump ./database.dump
 
 ## Проверки
 
+GitHub Actions выполняет существующие API-тесты, Ruff lint и Ruff format на Python 3.11. Тесты работают с изолированной SQLite; CI не заявляет проверку PostgreSQL concurrency, production deployment или frontend. При аудите 11.10.2026 локально в тестовом Docker-образе: 40 тестов прошли, покрытие `app` — 78%, оба Ruff checks прошли. Актуальный удалённый результат виден по badge.
+
 Тестовый образ отделён от рабочего. Тесты используют временную SQLite-базу и временный каталог картинок, рабочую БД не трогают.
 
 ```sh
@@ -82,7 +86,7 @@ docker compose exec backend python -m alembic current
 - `app/start.py`, `seed.py` — миграции и необязательная инициализация пустой БД.
 - `alembic/versions` — история схемы; `tests` — тесты API.
 - `frontend/src` — восстановленные из исходных source map и доработанные исходники учебного интерфейса.
-- `materials/dist` — готовая сборка; `nginx.conf`, `docker-compose.yml`, `Dockerfile` — запуск.
+- `materials/dist` — готовая сборка (исключена из языковой статистики как generated; `frontend/src` остаётся видимым); `nginx.conf`, `docker-compose.yml`, `Dockerfile` — запуск.
 
 Для сборки интерфейса нужен Node.js 22+:
 

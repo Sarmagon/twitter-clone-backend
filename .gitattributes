@@ -1,0 +1,2 @@
+# Compiled teaching UI includes bundles and source maps; own frontend/src stays visible.
+materials/dist/** linguist-generated=true
